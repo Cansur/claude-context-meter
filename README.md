@@ -3,10 +3,10 @@
 A Claude Code mod that keeps a one-line meter in the status line under the prompt, so you always see how full the context window is and how much of your subscription usage windows you have spent.
 
 ```
-token [█████████░░░░░░░░░░░] 45% · 5h [██░░░░░░░░] 23% (리셋 2h13m 후) · 7d [████░░░░░░] 40% (리셋 3d5h 후) · API환산 $3.10
+ctx [█████████░░░░░░░░░░░] 45% · 5h [██░░░░░░░░] 23% (리셋 2h13m 후) · 7d [████░░░░░░] 40% (리셋 3d5h 후) · API환산 $3.10
 ```
 
-- `token` — context window fill (20-cell bar, ⚠ at 80% or more)
+- `ctx` — context window fill (resets on `/clear` or compaction, not on the 5h window) (20-cell bar, ⚠ at 80% or more)
 - `5h` / `7d` — subscription rate-limit windows and time until each resets (shown once the first response reports them; absent with an API key)
 - `API환산` — what the session would cost at API prices, as `/cost` totals it (not a charge on a subscription)
 

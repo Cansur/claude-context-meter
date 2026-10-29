@@ -35,7 +35,7 @@ const formatContext = (context: SessionContextUsage): string => {
   const percent = context.percent ?? Math.round((used / context.window) * 100)
   const warn = percent >= WARN_PERCENT ? ' ⚠' : ''
 
-  return `token ${formatBar(percent, BAR_CELLS)} ${percent}%${warn}`
+  return `ctx ${formatBar(percent, BAR_CELLS)} ${percent}%${warn}`
 }
 
 const formatLimits = (limits: SessionRateLimit[], now: number): string =>
